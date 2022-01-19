@@ -14,7 +14,7 @@ export default class App extends Component {
       <div>
         {/* this is react class baed compnonents {this.c} */}
         <Navbar/>
-         <News pageSize={10}/>
+         <News pageSize={10} country="in" category="sports"/>
       </div>
     )
   }
