@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { Loading } from './Loading'
 import NewsItem from './NewsItem'
 
-
 export class News extends Component {
-
+    
     static defaultProps={
         pageSize:10,
         country:"in" ,
@@ -292,7 +291,8 @@ async   componentDidMount(){
        this.setState({loading:false})
       this.setState({article:parsedata.articles,totalResults:parsedata.totalResults})
        
-
+      
+console.log(this.props.category)
     }
 
     onnextclick= async ()=>{
@@ -331,6 +331,7 @@ async   componentDidMount(){
       
         return (
             <div className='container my-3'>
+                
                 <h2 className='text-center'>NewsMonkey - Top Headlines </h2>
                   {this.state.loading &&  <Loading/>}
                 <div className='row'>
